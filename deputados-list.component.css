@@ -1,0 +1,35 @@
+
+.btn {
+    padding: 12px 28px;
+    margin: 6px 8px 6px 8px;
+    min-width:100px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration:none;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: #008CBA;
+    color: white;
+  }
+
+.mat-card-deputado{
+  border: 1px solid #cfd8dc;
+  border-radius : 4px 3px 6px / 2px 4px;
+  padding-top: 15px;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-bottom: 0%;
+  margin: 5px;
+}
+.mat-card-title-deputado{
+ padding-left: 10px;
+ padding-top: 0px;
+ padding-right: 15px;
+ padding-bottom: 0px;
+ min-height: 70px;
+}
+
+

@@ -1,0 +1,41 @@
+<div class="row"style="padding-top: 40px; padding-left: 2%; padding-right: 2%;">
+    <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%;">
+        <ng-container>
+            
+            <label>Uf</label>
+                <select class="custom-select" [(ngModel)]="ufSelector" (ngModelChange)="onUfSelector($event)">
+                    <option *ngFor="let uf of Uf" [value]="uf.siglaUf">{{uf.siglaUf}}</option>
+                </select>
+                <select class="custom-select" [(ngModel)]="partidoSelector" (ngModelChange)="onPartidoSelector($event)">
+                    <option *ngFor="let partido of Partido" [value]="partido.id">{{partido.siglaPartido}}</option>
+                </select>
+                <select class="custom-select" [(ngModel)]="nomeSelector" (ngModelChange)="onNomeSelector($event)">
+                    <option *ngFor="let nome of Nome" [value]="nome.nome">{{nome.nome}}</option>
+                </select>    
+            
+            <ng-container *ngFor="let deputado of Deputados" style="margin: 0.5%">
+                    <mat-card class="mat-card-deputado" fxFlex="0 1 calc(33.3% -11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+                        <mat-card-title class="mat-card-title-deputado">
+                        <div class="row">
+                            <p>
+                                <span fxFlex="70" fxLayoutAlign="start center">{{deputado.nome}}</span>
+                                <span fxFlex></span>
+                                <span fxFlex="25" fxLayoutAlign="end center">{{deputado.siglaUf}}</span>
+                            </p>
+                            <p>
+                                <span>Partido : {{deputado.siglaPartido}}</span>
+                            </p>
+                        </div>
+                        </mat-card-title>
+                    <mat-card-content>
+                
+                    </mat-card-content>
+                        <mat-card-actions>
+                            <button class ="btn">Ver mais</button>
+                        </mat-card-actions>
+                    </mat-card>
+            </ng-container>  
+        </ng-container>      
+    </div>
+    
+</div>
